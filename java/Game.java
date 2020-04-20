@@ -67,7 +67,7 @@ class Game{
 					}
 					array[x].incCounter();
 					//Debug line
-					System.out.println(array[i].getRole() + " " + array[i].getName() + " has voted to kill " + array[x].getRole() + " " + array[x].getName());
+					//System.out.println(array[i].getRole() + " " + array[i].getName() + " has voted to kill " + array[x].getRole() + " " + array[x].getName());
 				}else{
 					String a = array[i].vote();
 					for (int j = 0; j < 9; j++){
@@ -148,7 +148,7 @@ class Game{
 					}
 					array[x].incCounter();
 					//Debug line
-					System.out.println(array[i].getRole() + " " + array[i].getName() + " voted to kill " + array[x].getRole() + " " + array[x].getName());
+					//System.out.println(array[i].getRole() + " " + array[i].getName() + " voted to kill " + array[x].getRole() + " " + array[x].getName());
 				}else{
 					String a = array[i].vote();
 					for (int j = 0; j < 9; j++){
@@ -167,7 +167,7 @@ class Game{
 			if (array[i].getRole().equals("Seer") && array[i].isAlive()){
 				array[i].ask(array);
 				//Debug line
-				System.out.println("Seer " + array[i].getName() + " saw " + array[i].getLastRole() + " " + array[i].getLastName());
+				//System.out.println("Seer " + array[i].getName() + " saw " + array[i].getLastRole() + " " + array[i].getLastName());
 				break;
 			}
 		}
