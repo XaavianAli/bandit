@@ -1,9 +1,9 @@
-# werewolf-clone
-Currently text based clone of the popular game werewolf\
-Plan to use this code as a base for a local multiplayer smartphone game
+# bandit
+Web based game based off of the popular game werewolf\
+Currently in developpment
 
 # How to play
-Following instructions are for MacOS and Linux, Windows users the instructions are pretty much the same but the commands may be different
+This is currently to test out the mechanics of the game, I have not yet implemented them yet.
 1. Download the files
 2. `cd /path/to/directory/java/`
 3. `javac *.java`
