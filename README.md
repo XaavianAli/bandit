@@ -1,6 +1,6 @@
 # bandit
 Web based game based off of the popular game werewolf\
-Currently in developpment
+Game mechanics written in Java, webapp portion powered by Node.js
 
 # Node Server
 To run the node server:
