@@ -1,0 +1,46 @@
+<!--Client-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta charset="utf-8"/>
+
+	<script src="ClientScript.js"></script>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="ClientStyle.css">
+		<link href='https://fonts.googleapis.com/css?family=Copse' rel='stylesheet'>
+	</head>
+
+	<body onload="loaded()">
+		<img id="bandit" class="screen1 screen2" src="bandito.png">
+		<div id="wait" class="titletext screen3">Waiting for players...</div>
+		<div id="joined" class="titletext screen4">Game Joined! Look at main screen and wait for host to start</div>
+		<img id="load" class="screen4" src="load.gif">
+		<div id="container">
+				<div class="homebutton screen1" id="host" onclick="host()">Host</div>
+				<div class="homebutton screen1" id="player" onclick="player()">Player</div>
+				<input id="gameid" class="homeinput screen2" type="text" placeholder="Game ID" maxlength="6">
+				<input id="username" class="homeinput screen2" type="text" placeholder="Username" maxlength="10">
+				<div class="homebutton screen2" id="join" onclick="join()">Join Game</div>
+		</div>
+		<div id="error" class="titletext"></div>
+		<div id="list" class="screen3">
+			<list>
+				<ol>
+					<li id="player1"></li>
+					<li id="player2"></li>
+					<li id="player3"></li>
+					<li id="player4"></li>
+					<li id="player5"></li>
+					<li id="player6"></li>
+					<li id="player7"></li>
+					<li id="player8"></li>
+					<li id="player9"></li>
+				</ol>
+			</list>
+		</div>
+		<div class="homebutton screen3" id="start" onclick="start()">Start Game</div>
+	</body>
+
+</html>

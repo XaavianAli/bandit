@@ -1,0 +1,115 @@
+/* . = class, # = id*/
+
+* {
+	/*border-style:solid;
+	border-width:1px;
+	border-color:black;*/
+	font-family:"copse",monospace;
+	color:white;
+}
+
+html {
+	background-color:#e39139;
+}
+
+#bandit {
+	display:block;
+	width:40%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:7%;
+}
+
+#container {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:50%;
+}
+
+.homebutton {
+	display:inline-block;
+	background-color:#1a1a1a;
+	min-width:48%;
+	text-align:center;
+	font-size:300%;
+	border-radius:4px;
+	margin-top:10%;
+}
+
+.homebutton:hover {
+	background-color:#5e5e5e;
+}
+
+.homeinput {
+	background-color:#ffffff;
+	text-align:center;
+	max-width:48%;
+	font-size:300%;
+	border-radius:3px;
+	margin-top:10%;
+	color:#cccccc;
+}
+
+#join {
+	display:none;
+}
+
+#list {
+	display:none;
+	min-width:85%;
+	max-width:85%;
+	margin-left:auto;
+	margin-right:auto;
+	color:black;
+	background-color:#ededed;
+	min-height:200%;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+ol {
+	color:black;
+	font-size:100%;
+}
+
+li {
+	color:black;
+	font-size:200%;
+}
+
+.titletext {
+	font-size:300%;
+	text-align:center;
+}
+
+#start {
+	display:none;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:2%;
+}
+
+#load {
+	display:none;
+	width:5%;
+	height:5%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#wait {
+	display:none;
+}
+
+#joined {
+	display:none;
+}
+
+#gameid {
+	display:none;
+}
+
+#username {
+	display:none;
+}
