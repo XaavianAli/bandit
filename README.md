@@ -2,7 +2,13 @@
 Web based game based off of the popular game werewolf\
 Currently in developpment
 
-# How to play
+# Node Server
+To run the node server:
+1. Download the files
+2. cd /path/to/directory/webapp/
+3. node NodeServer.js
+
+# Test out mechanics
 This is currently to test out the mechanics of the game, I have not yet implemented them yet.
 1. Download the files
 2. `cd /path/to/directory/java/`
