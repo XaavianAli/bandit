@@ -19,6 +19,9 @@ socket.addEventListener('open', function (event) {
 socket.addEventListener('message', function (data) {
 	console.log("Received: " + data.data);
 	data = JSON.parse(data.data);
+    if (data.players != undefined){
+        players = JSON.parse(data.players);
+    }
     console.log('Message from server: ' + data.text);
 
     //SETUP COMPLETE***********************************************
@@ -30,6 +33,7 @@ socket.addEventListener('message', function (data) {
 		document.getElementById("wait").innerHTML = "Game ID: " + data.gameid + ". Waiting for players to join...";
 		document.getElementById("list").style.display = "block";
 		document.getElementById("start").style.display = "block";
+        document.getElementById("key").innerHTML = data.gameid;
     }
 
     //GAMENOTFOUND*************************************************
@@ -46,6 +50,7 @@ socket.addEventListener('message', function (data) {
     	document.getElementById("error").style.display = "none";
     	document.getElementById("joined").style.display = "block";
     	document.getElementById("load").style.display = "block";
+        document.getElementById("key").innerHTML = data.gameid;
     }
 
     //UPDATEMENU***************************************************
@@ -72,6 +77,74 @@ socket.addEventListener('message', function (data) {
     	}
     	q++;
     }
+
+    //INITIALIZEHOST*****************************
+
+    if (data.goal == "initializehost"){
+        document.getElementById("wait").style.display = "none";
+        document.getElementById("list").style.display = "none";
+        document.getElementById("start").style.display = "none";
+        document.getElementById("pcontainer").style.display = "block";
+        document.getElementById("prompt").style.display = "block";
+        document.getElementById("prompt").innerHTML = "Game Started!";
+
+        if (players[0].bot == true){
+            document.getElementById("p1i").src = "bot.png";
+        }
+        document.getElementById("p1n").innerHTML = players[0].username;
+        document.getElementById("p1s").innerHTML = "Alive";
+        document.getElementById("p1r").innerHTML = "???";
+        if (players[1].bot == true){
+            document.getElementById("p2i").src = "bot.png";
+        }
+        document.getElementById("p2n").innerHTML = players[1].username;
+        document.getElementById("p2s").innerHTML = "Alive";
+        document.getElementById("p2r").innerHTML = "???";
+        if (players[2].bot == true){
+            document.getElementById("p3i").src = "bot.png";
+        }
+        document.getElementById("p3n").innerHTML = players[2].username;
+        document.getElementById("p3s").innerHTML = "Alive";
+        document.getElementById("p3r").innerHTML = "???";
+        if (players[3].bot == true){
+            document.getElementById("p4i").src = "bot.png";
+        }
+        document.getElementById("p4n").innerHTML = players[3].username;
+        document.getElementById("p4s").innerHTML = "Alive";
+        document.getElementById("p4r").innerHTML = "???";
+        if (players[4].bot == true){
+            document.getElementById("p5i").src = "bot.png";
+        }
+        document.getElementById("p5n").innerHTML = players[4].username;
+        document.getElementById("p5s").innerHTML = "Alive";
+        document.getElementById("p5r").innerHTML = "???";
+        if (players[5].bot == true){
+            document.getElementById("p6i").src = "bot.png";
+        }
+        document.getElementById("p6n").innerHTML = players[5].username;
+        document.getElementById("p6s").innerHTML = "Alive";
+        document.getElementById("p6r").innerHTML = "???";
+        if (players[6].bot == true){
+            document.getElementById("p7i").src = "bot.png";
+        }
+        document.getElementById("p7n").innerHTML = players[6].username;
+        document.getElementById("p7s").innerHTML = "Alive";
+        document.getElementById("p7r").innerHTML = "???";
+        if (players[7].bot == true){
+            document.getElementById("p8i").src = "bot.png";
+        }
+        document.getElementById("p8n").innerHTML = players[7].username;
+        document.getElementById("p8s").innerHTML = "Alive";
+        document.getElementById("p8r").innerHTML = "???";
+        if (players[8].bot == true){
+            document.getElementById("p9i").src = "bot.png";
+        }
+        document.getElementById("p9n").innerHTML = players[8].username;
+        document.getElementById("p9s").innerHTML = "Alive";
+        document.getElementById("p9r").innerHTML = "???";
+
+    }
+
 });
 
 function host(){
@@ -96,4 +169,11 @@ function player(){
 	document.getElementById("gameid").style.display = "inline";
 	document.getElementById("username").style.display = "inline";
 	document.getElementById("join").style.display = "block";
+}
+
+function start(){
+    var data = {goal:"initialize", gameid:document.getElementById("key").innerHTML, text:"Host Starting Game"};
+    data = JSON.stringify(data);
+    console.log("Sending " + data);
+    socket.send(data);
 }
