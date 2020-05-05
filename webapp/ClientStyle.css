@@ -1,15 +1,16 @@
 /* . = class, # = id*/
 
 * {
-	/*border-style:solid;
-	border-width:1px;
-	border-color:black;*/
 	font-family:"copse",monospace;
 	color:white;
 }
 
 html {
-	background-color:#e39139;
+	/*background-color:#e39139;*/
+	background-image:url(background.png);
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
 }
 
 #bandit {
@@ -66,6 +67,7 @@ html {
 	min-height:200%;
 	padding-top:3px;
 	padding-bottom:3px;
+	border-radius:6px;
 }
 
 ol {
@@ -81,6 +83,7 @@ li {
 .titletext {
 	font-size:300%;
 	text-align:center;
+	margin-bottom:1%;
 }
 
 #start {
@@ -113,3 +116,94 @@ li {
 #username {
 	display:none;
 }
+
+#pcontainer {
+	display:block;
+}
+
+.pstatus {
+	display:inline-block;
+	background-color:#dedede;
+	min-width:10.882%;
+	max-width:10.882%;
+	min-height:100%;
+	border-radius:4px;
+	opacity: 0.8;
+}
+
+.icon {
+	display:block;
+	max-width:30%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.name {
+	display:block;
+	text-align:center;;
+	color:black;
+}
+
+.status {
+	display:block;
+	text-align:center;
+	color:#00751f;
+}
+
+.role {
+	display:block;
+	text-align:center;
+	color:#353535;
+}
+
+#votingblock {
+	display:inline-block;
+	min-width:50%;
+	max-height:70%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+.votee {
+	display:inline-block;
+	text-align:center;
+	color:black;
+	background-color:#dedede;
+	font-size:175%;
+	min-width:80%;
+	border-radius:6px 0 0 6px;
+	margin-bottom:0.7%;
+	opacity:0.75;
+}
+
+.count {
+	display:inline-block;
+	text-align:center;
+	background-color:black;
+	font-size:175%;
+	min-width:20%;
+	border-radius:0 6px 6px 0;
+	margin-bottom:0.7%;
+	opacity:0.75;
+}
+
+.hold {
+	display:block;
+}
+
+#parent {
+	/*display:block;*/
+	display:none;
+	text-align:center;
+}
+
+#prompt {
+	display:none;
+}
+
+#pcontainer {
+	display:none;
+}
+
+
