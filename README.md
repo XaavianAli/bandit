@@ -8,6 +8,10 @@ To run the node server:
 2. cd /path/to/directory/webapp/
 3. node NodeServer.js
 
+# Web App
+1. Open ClientPage.html in your web browser of choice AFTER starting the node server
+2. Each player requires their own device to play and the whole party needs a common screen to host the game such as a computer connected to a screen, or a smartboard 
+
 # Test out mechanics
 This is currently to test out the mechanics of the game, I have not yet implemented them yet.
 1. Download the files
