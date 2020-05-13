@@ -2,6 +2,11 @@
 Web based game based off of the popular game werewolf\
 Game mechanics written in Java, webapp portion powered by Node.js
 
+# Example Screens
+![Title Screen](https://github.com/XaavianAli/bandit/blob/master/Example/title.png)
+![Lobby Screen](https://github.com/XaavianAli/bandit/blob/master/Example/lobby.png)
+![Host Game Started](https://github.com/XaavianAli/bandit/blob/master/Example/game.png)
+
 # Node Server
 To run the node server:
 1. Download the files
