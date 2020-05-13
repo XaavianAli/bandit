@@ -145,6 +145,11 @@ socket.addEventListener('message', function (data) {
 
     }
 
+    //INITIALIZEPLAYER
+    if (data.goal == "initializeplayer"){
+        
+    }
+
 });
 
 function host(){

@@ -117,6 +117,22 @@ wss.on('connection', function connection(ws) {
 			var data = {goal:"initializehost", players:p, text:"Game Started on Host"};
 			data = JSON.stringify(data);
 			game.host.send(data);
+			for (var i = 0; i < 9; i++){
+				if (game.playerArray[i].role != "Bandit"){
+					var x = "You are a " + game.playerArray[i].role + ".";
+				} else {
+					var b = [];
+					for (var j = 0; j < 9; j++){
+						if (game.playerArray[j].role == "Bandit" && game.playerArray[j].username != game.playerArray[i].username){
+							b.push(game.playerArray[j].username);
+						}
+					}
+					var x = "You are a Bandit! Your partners are: " + b[0] + " and " + b[1] + ".";
+				} 
+				var data = {goal:"initializeplayer", prompt:x, text:"Game Started on Player"};
+				data = JSON.stringify(data);
+				game.playerArray[i].socket.send(data);
+			}
 		}
 
 	});
