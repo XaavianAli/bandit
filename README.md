@@ -23,3 +23,8 @@ This is currently to test out the mechanics of the game, I have not yet implemen
 2. `cd /path/to/directory/java/`
 3. `javac *.java`
 4. `java Main <numberOfPlayers>`
+
+# To Do
+1. Optimize for mobile players
+2. Implement game mechanics server side
+3. Create real user icon graphics
